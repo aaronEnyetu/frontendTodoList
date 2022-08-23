@@ -3,7 +3,7 @@
 // get the info from the form
 // make an API request to /api/v1/users with the info
 
-import { signUpUser } from './fetch-utils.js';
+import { redirectIfLoggedIn, signUpUser } from './fetch-utils.js';
 
 // let state
 const signUpForm = document.getElementById('sign-up');
@@ -26,3 +26,4 @@ signUpForm.addEventListener('submit', async (e) => {
 // if user is logged in -- redirect to /tasks page
 // else stay here
 
+redirectIfLoggedIn();
