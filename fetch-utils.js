@@ -1,5 +1,6 @@
-const BASE_URL = 'http://localhost:7890';
+const BASE_URL = 'https://fullstacktodobackend.herokuapp.com';
 
+//'http://localhost:7890';
 export async function signUpUser(userInfo) {
     const resp = await fetch(`${BASE_URL}/api/v1/users`, {
         method: 'POST',
