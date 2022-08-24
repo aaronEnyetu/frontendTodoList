@@ -10,22 +10,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <title>Web App</title>
+    <title>Home Page</title>
 </head>
 
 <body>
     <header>
         <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
+        <h1></h1>
     </header>
 
     <main>
+        <h1 class="is-size-3">Sign Up</h1>
+            <form id="sign-up">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="input" placeholder="Email" />
+                <label for="password">Password</label>
+                <input type="password" name="password" class="input" placeholder="Password" />
+                <button class="button is-primary">Submit</button>
+            </form>
 
+            <form id="sign-in">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="input" placeholder="Email" />
+                <label for="password">Password</label>
+                <input type="password" name="password" class="input" placeholder="Password" />
+                <button class="button is-primary">Submit</button>
+            </form>
     </main>
 
-    <footer>&copy;2022 Software Developer</footer>
+    <footer>&copy;2022 Aaron Enyetu-Software Developer</footer>
 
     <script type="module" src="app.js"></script>
 </body>
