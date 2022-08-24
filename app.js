@@ -3,10 +3,11 @@
 // get the info from the form
 // make an API request to /api/v1/users with the info
 
-import { redirectIfLoggedIn, signUpUser } from './fetch-utils.js';
+import { redirectIfLoggedIn, signUpUser, signInUser } from './fetch-utils.js';
 
 // let state
 const signUpForm = document.getElementById('sign-up');
+const signInForm = document.getElementById('sign-in');
 
 // set event listeners 
   // get user input
@@ -18,6 +19,17 @@ signUpForm.addEventListener('submit', async (e) => {
         email: formData.get('email'),
         password: formData.get('password'),
         
+    });
+    console.log(data);
+});
+
+signInForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(signInForm);
+    const data = await signInUser({
+        email: formData.get('email'),
+        password: formData.get('password'),
+      
     });
     console.log(data);
 });
